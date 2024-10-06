@@ -1,0 +1,1 @@
+Make sure I input a message before commit & push, otherwise it takes forever without an actual commit & push.

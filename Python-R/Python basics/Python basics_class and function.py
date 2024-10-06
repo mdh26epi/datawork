@@ -126,4 +126,3 @@ print(x.div()) # returns "Cannot divide by zero"
 
 y = SafeFourCal(4,3)
 print(y.div()) # returns (1.3333333333333333, 1)
-
