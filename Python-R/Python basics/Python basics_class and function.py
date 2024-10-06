@@ -109,17 +109,21 @@ a.add                  # result = self.first + self.second, thus 4 + 2 = 6
 # Method Overriding
 ##########################################################
 
-a = FourCal(4,0)
-a.div()    # Returns an error message: "ZeroDivisionError: division by zero"
-# What if we want to 
+#----------------------------------------------------------------------------------------------------------------
+# Q: What if we want to override this default output from .div() of FourCal() without changing the original method?
+# A: Override the .div() method of Fourcal() class by writing a new .div() method for another inheriting class
+#----------------------------------------------------------------------------------------------------------------
 
-
-class SafeFourCal(FourCal):
+class SafeFourCal(FourCal):   # SafeFourCal() inherits all methods from 
     def div(self):
-        if self.second == 0:  # 나누는 값이 0인 경우 0을 리턴하도록 수정
-            return 0
+        if self.second == 0:  #
+            return "Cannot divide by zero"
         else:
-            return self.first / self.second
+            return (self.first / self.second, self.first % self.second)
 
-# asd
+x = SafeFourCal(4,0)
+print(x.div()) # returns "Cannot divide by zero"
+
+y = SafeFourCal(4,3)
+print(y.div()) # returns (1.3333333333333333, 1)
 
