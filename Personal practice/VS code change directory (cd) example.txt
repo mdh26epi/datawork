@@ -1,0 +1,3 @@
+cd "C:\Users\handa\OneDrive\Desktop\PhD progress\datawork\doit"
+
+use double quotation marks around the new directory path
